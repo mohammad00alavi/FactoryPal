@@ -1,0 +1,60 @@
+// Variables
+
+$border: 1px solid rgb(226, 225, 225);
+
+#tableContainer {
+  width: 100%;
+  margin: 30px 0 50px 0;
+  > div {
+    padding: 0 20px;
+  overflow-x: auto;
+
+  }
+  table {
+    border-collapse: separate;
+    margin: auto;
+    border-spacing: 0;
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
+      border-bottom: $border;
+    }
+    thead {
+      background-color: rgb(247, 247, 247);
+      text-transform: capitalize;
+      font-size: 0.8rem;
+      color: rgb(136, 136, 136);
+      th {
+        border-top: $border;
+      }
+      th:first-child {
+        border-radius: 10px 0 0 0;
+        border-left: $border;
+      }
+      th:last-child {
+        border-radius: 0 10px 0 0;
+        border-right: $border;
+      }
+    }
+    tbody {
+      td:first-child {
+        border-left: $border;
+      }
+      td:last-child {
+        border-right: $border;
+      }
+      tr:last-child {
+        td:first-child {
+          border-radius: 0 0 0 10px;
+        }
+        td:last-child {
+          border-radius: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}
